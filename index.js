@@ -1,11 +1,10 @@
 const express = require("express");
-
 const app = express();
-const connectDataBase = require("./src/database/db");
 
 const userRoute = require("../MRN/src/routes/user.route");
 const port = 3000;
 
+const connectDataBase = require("./src/database/db");
 connectDataBase();
 
 app.use(express.json());
